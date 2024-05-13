@@ -1,0 +1,56 @@
+.hero{
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+    padding-top: 100px;
+}
+.hero_text{
+    width: 450px;
+    height: 550px;
+}
+.hero_text h2{
+    width: 450px;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 80px;
+}
+.hero_text p{
+    width: 440px;
+    font-size: 16px;
+    color: rgba(139, 142, 153, 1);
+    margin-bottom: 70px;
+    line-height: 20px;
+}
+.hero_text form{
+    width: 400px;
+    height: 50px;
+    background: white;
+    display: flex;
+    gap: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 15px;
+}
+.hero_text form input{
+    width: 220px;
+    height: 30px;
+    background: fixed;
+    border: 0px;
+    padding-left: 10px;
+}
+.hero_text form button{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    background: rgba(56, 88, 214, 1);
+    border: 0px;
+    cursor: pointer;
+}
+.hero img{
+    width: 450px;
+    height: 550px;
+}

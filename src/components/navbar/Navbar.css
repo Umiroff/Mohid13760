@@ -1,0 +1,39 @@
+.nav{
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    gap: 170px;
+}
+.nav img{
+    width: 100px;
+    height: 70px;
+}
+.nav_bar{
+    display: flex;
+    padding-top: 25px;
+    gap: 20px;
+    color: rgba(139, 142, 153, 1);
+}
+.nav_bar p:hover{
+    color: white;
+    cursor: pointer;
+}
+.nav_bar select:hover{
+    color: white;
+    cursor: pointer;
+}
+.nav_bar select{
+    width: 70px;
+    height: 22px;
+    background: fixed;
+    border: 0px;
+    color: rgba(139, 142, 153, 1);
+}
+.nav_icons{
+    width: 200px;
+    height: 50px;
+    padding-top: 25px;
+    display: flex;
+    gap: 30px;
+}

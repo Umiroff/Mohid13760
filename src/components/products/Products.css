@@ -1,0 +1,23 @@
+.products{
+    width: 80%;
+    margin: 0 auto;
+}
+.wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.pro{
+    width: 300px;
+    height: 400px;
+    margin-bottom: 30px;
+}
+.pro_img{
+    width: 300px;
+    height: 330px;
+}
+.pro_img img {
+    width: 300px;
+    height: 300px;
+}

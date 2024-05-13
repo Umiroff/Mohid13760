@@ -1,0 +1,9 @@
+.home{
+    width: 1200px;
+    margin: 0 auto;
+}
+.home_top{
+    width: 100%;
+    height: 850px;
+    background: linear-gradient(155.28deg, #383638 2.06%, #0B0B0B 33.08%);
+}
