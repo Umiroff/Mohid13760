@@ -11,17 +11,27 @@ import axios from 'axios';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [value, setValue] = useState('');
+    const [data, setData] = useState(null);
 
     const toggleCollapse = () => {
       setIsOpen(!isOpen);
     };
 
     useEffect(() => {
+        if(!value.trim()) return
         axios
             .get(`https://dummyjson.com/products/search?q=${value}`)
-            .then(res => console.log(res))
+            .then(res => setData(res.data.products))
             .catch(err => console.log(err))
-    }, [])
+    }, [value])
+
+    let searchItems = data?.map(el => (
+        <div key={el.id} style={{display: 'flex'}}>
+            <img src={el.thumbnail} alt="" />
+            <h3>{el.title}</h3>
+        </div>
+    ))
+
   return (
     <>
         <div className='nav'>
@@ -42,10 +52,15 @@ function Navbar() {
             </div>
             {isOpen && (
                 <div className='collapse'>
-                    <form action="">
-                        <input type="text" value={value} onChange={e => setValue(e.target.value)} placeholder='search...'/>
-                    </form>
-                    <button onClick={toggleCollapse}>cancel</button>
+                    <div>
+                        <form action="">
+                            <input style={{width: 500}} type="text" value={value} onChange={e => setValue(e.target.value)} placeholder='search...'/>
+                        </form>
+                        <div>
+                            {searchItems}
+                        </div>
+                        <button style={{width: 100, height: 40}} onClick={toggleCollapse}>cancel</button>
+                    </div>
                 </div>
             )}
         </div>
